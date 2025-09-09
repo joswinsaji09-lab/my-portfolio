@@ -1,0 +1,158 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(101, 124, 123); /* goldenrod navbar */
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: rgb(236, 236, 236);
+  text-decoration: none;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: rgb(239, 239, 238);
+  text-decoration: underline;
+}
+
+/* Each section takes full screen */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px; /* space for navbar */
+}
+
+/* Hero section */
+.hero {
+  background-color: brown;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.hero h1 {
+  font-size: 57px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: rgb(176, 254, 74);
+}
+.hero p {
+  font-size: 56px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.circle-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* makes it a circle */
+  border: 5px solid white;
+}
+
+/* About */
+.about {
+  background-color: #f4f4f4;
+  color: #333;
+}
+.about h2{
+  font-size: 57px;
+  font-family:Calliberri;
+ font-weight:bold;
+ color: #796a6a;
+}
+.about p {
+  font-size:36px;
+  font-family:monospace;
+  color: #5c6280;
+}
+/* Skills */
+.skills {
+  background-color: #cce7ff; /* light blue */
+  color: #666060;
+}
+.skills h2 {
+  font-size: 57px;
+  font-family: calliberri;
+  font-weight: bold;
+  color: #605757;
+}
+
+.skills ul {
+  list-style-type: disc; /* dots before skills */
+  padding-left: 40px;
+  text-align: left;
+  display: inline-block; /* keeps list centered */
+  font-family: monospace;
+  font-size: 40px;
+  color: #796a6a;
+}
+
+.skills li {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Projects */
+.projects {
+  background-color: #ddd;
+  color: #111;
+}
+.projects h2 {
+  font-size: 57px;
+  font-family: calliberri;
+  color: #796a6a;
+}
+.projects p{
+  font-size: 40px;
+  font-family: monospace;
+  color: #877e7e;
+}
+/* Contact */
+.contact {
+  background-color: #222;
+  color: white;
+}
+.contact h2 {
+  font-size: 57px;
+  font-family: calliberri;
+  color: #796a6a;
+}
+.contact p {
+  font-size: 40px;
+  font-family: monospace;
+  color: #b0aeae;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #eee;
+  text-align: center;
+  padding: 20px;
+}
