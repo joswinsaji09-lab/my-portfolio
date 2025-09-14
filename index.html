@@ -1,69 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joswin's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joswin Saji - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll(".page").forEach(p => p.style.display = "none");
+      document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
+
+      const page = document.getElementById(pageId);
+      const activeLink = document.querySelector(`nav a[data-page='${pageId}']`);
+
+      if (page) {
+        page.style.display = "block";
+        page.classList.add("fade");
+
+        // ✅ Scroll smoothly to center the section on screen
+        page.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      if (activeLink) {
+        activeLink.classList.add("active");
+      }
+    }
+
+    window.onload = () => showPage("about");
+  </script>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <p class="subheading"><b>H!</b></p>
+    <h1>I'm Joswin Saji</h1>
+    <p>Engineering Student | AI & Data Science</p>
+    <p><b> WELCOME TO MY PORTFOLIO </b></p>
+    <nav>
+      <a href="#" data-page="about" onclick="showPage('about')">About</a>
+      <a href="#" data-page="skills" onclick="showPage('skills')">Skills</a>
+      <a href="#" data-page="education" onclick="showPage('education')">Education</a>
+      <a href="#" data-page="projects" onclick="showPage('projects')">Projects</a>
+      <a href="#" data-page="contact" onclick="showPage('contact')">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Page 1: Hero -->
-  <section class="hero" id="hero">
-    <div class="circle-photo">
-      <img src="images/yourphoto.jpg" alt="Joswin's Photo">
+  <!-- About -->
+  <section class="page" id="about">
+    <h2>ABOUT ME</h2>
+    <div class="profile-pic">
+      <img src="C:\Users\sajip\Desktop\portfolioo\WL_05377.JPG" alt="Joswin Saji">
     </div>
-    <div class="intro-text">
-      <h1>Hi, I'm Joswin</h1>
-      <p>Welcome to my portfolio</p>
-    </div>
+    <p>Hi there! I'm Joswin Saji. I'm a first-year engineering student in Artificial Intelligence & Data Science at Rajagiri School Of Engineering and Technology ,Kakkanad. I'm passionate about learning and creativity. I like learning about web development and new technologies. I chose to pursue engineering because of my passion for technology and innovation. I always try my best to stay updated on the latest technologies.</p>
   </section>
 
-  <!-- Page 2: About Me -->
-  <section class="about" id="about">
-    <h2>About Me</h2>
-    <p> Hi there!I'm Joswin Saji.I'm a first year engineering student in <b>Aritificial Intelligence & Data Science </b> at <b> RSET Kakkanad .</b>I'm passionate about learning and creativity.I like learning about <b> web development and new technologies.</b>I chose to pursue <b>engineering </b> because of my  passion for <b>technology and innovation</b>.I always try my best to stay updated on the latest technologies.</p>
-   </section>
-  </section>
-
-  <!-- Page 3: Skills -->
-  <section class="skills" id="skills">
-    <h2>Skills</h2>
+  <!-- Skills -->
+  <section class="page" id="skills">
+    <h2>SKILLS</h2>
     <ul>
       <li>Canva & Presentation Design</li>
       <li>Time Management</li>
-      <li>Problem solving</li>
+      <li>Problem Solving</li>
       <li>Teamwork</li>
       <li>Adaptability & Learning Mindset</li>
     </ul>
   </section>
 
-  <!-- Page 4: Projects -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <p>Will Update Soon......</p>
+  <!-- Education -->
+  <section class="page" id="education">
+    <h2>EDUCATION</h2>
+    <p><strong>Rajagiri School of Engineering and Technology, Kakkanad</strong><br />
+      Pursuing B.Tech in Artificial Intelligence & Data Science</p>
+    <p><strong>St. Joseph’s HSS, Vayattuparamba</strong><br />
+      Higher Secondary (2023–2025)</p>
+    <p><strong>St. Joseph’s HSS, Vayattuparamba</strong><br />
+      Completed 10th Standard (2023)</p>
   </section>
 
-  <!-- Page 5: Contact -->
-  <section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>Email: joswinsaji09@email.com</p>
+  <!-- Projects -->
+  <section class="page" id="projects">
+    <h2>PROJECTS</h2>
+    <p>Will update soon...</p>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    © 2025 Joswin Saji
+  <!-- Contact -->
+  <section class="page" id="contact">
+    <h2>CONTACT</h2>
+    <p><strong>Email:</strong> <a href="mailto:joswinsaji09@gmail.com">joswinsaji09@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joswin-saji-a2252b337" target="_blank">linkedin.com/in/joswin-saji</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Joswin Saji</p>
   </footer>
 
 </body>
 </html>
+
+
+ 
